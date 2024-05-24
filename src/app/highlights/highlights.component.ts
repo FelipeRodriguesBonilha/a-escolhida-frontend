@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../services/product.service';
+import { ProductService } from '../services/product/product.service';
 import { ReturnProductDto } from '../models/product/returnProduct.dto';
 import { HttpErrorResponse } from '@angular/common/http';
 import { initFlowbite } from 'flowbite';
