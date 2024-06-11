@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { HighlightsComponent } from '../highlights/highlights.component';
 import { FooterComponent } from '../footer/footer.component';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit {
+  ngOnInit() {
+    initFlowbite();
+  }
 }

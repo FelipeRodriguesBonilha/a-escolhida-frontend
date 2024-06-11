@@ -1,0 +1,22 @@
+<div class="bg-violet-300 text-white flex items-center justify-center w-full p-4">
+    <div class="flex items-center w-3/4 max-w-screen-2xl">
+        <div class="flex-1">
+            <p class="text-lg font-bold">A Escolhida Makeup</p>
+        </div>
+        <div class="flex-1">
+            <ul class="flex justify-center space-x-4">
+                <li class="hover:underline cursor-pointer text-center" routerLink="/admin-home/categories-adm">Gerenciar Categorias</li>
+                <li class="hover:underline cursor-pointer text-center" routerLink="/admin-home/suppliers-adm">Gerenciar Fornecedores</li>
+                <li class="hover:underline cursor-pointer text-center" routerLink="/admin-home/products-adm">Gerenciar Produtos</li>
+            </ul>
+        </div>
+        <div class="flex-1 flex justify-end items-center">
+            @if(user){
+                <button
+                class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white"
+                ><fa-icon [icon]="faArrowRightFromBracket" class="text-white"></fa-icon></button>
+            }
+        </div>
+    </div>
+</div>
+<router-outlet/>

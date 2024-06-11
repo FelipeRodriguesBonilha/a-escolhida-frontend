@@ -1,59 +1,114 @@
 <app-navbar></app-navbar>
 
-<div class="text-black flex items-center justify-center w-full" style="height: 700px;">
-    <div class="w-3/4 max-w-screen-2xl background-image">
-        <div class="flex justify-between w-full h-full">
-            <div class="flex flex-col justify-center">
-                <p class="mb-10 text-2xl">Realce a sua beleza com nossos produtos!</p>
-                <button class="bg-violet-400 hover:bg-violet-300 text-white font-bold py-2 px-4 rounded-full w-56">Conferir
-                    Produtos</button>
+<div class="bg-violet-100 text-black flex items-center justify-center w-full" style="height: 700px;">
+    <div class="bg-violet-400 w-3/4 max-w-screen-2xl h-full">
+        <div id="carousel-example" class="relative w-full h-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-full overflow-hidden rounded-lg">
+                <!-- Item 1 -->
+                <div id="carousel-item-1" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+                    <img src="https://www.sunsetcosmeticos.com.br/media/wysiwyg/banner-destaque.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div id="carousel-item-2" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+                    <img src="../../assets/imagens/makeup-2824659.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div id="carousel-item-3" class="hidden duration-200 ease-linear h-full carousel-item active" data-carousel-item="active">
+                    <img src="../../assets/imagens/makeup-2824659.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div id="carousel-item-4" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+                    <img src="../../assets/imagens/makeup-2824659.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+                </div>
             </div>
-            <div class="flex items-center">
-                <img src="../../assets/imagens/makeup-2824659.jpg" alt="Descrição da Imagem" class="h-80 w-80">
-                <img src="../../assets/imagens/woman-6144774.jpg" alt="Descrição da Imagem" class="h-80 w-80 ml-4">
-            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
         </div>
     </div>
 </div>
 
-<div class="text-black flex justify-center w-full p-4" style="height: auto">
+
+
+
+<div class="bg-white text-black flex justify-center w-full p-4" style="height: auto">
     <div class="w-3/4 max-w-screen-2xl">
         <div class="flex flex-col items-center w-full mt-4">
-            <p class="text-2xl mb-1 font-kasei-decol-800">Nossos Produtos</p>
-            <p class="text-center color-text-products">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repellendus ea fugiat maiores blanditiis suscipit, sint voluptatem praesentium doloremque veniam placeat aliquam dolores fuga consectetur possimus nulla, saepe modi? Obcaecati.</p>
+            <p class="text-2xl font-bold font-kasei-decol-800 text-violet-400">Nossos Produtos</p>
+            <p class="text-center font-bold text-violet-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Rem repellendus ea fugiat maiores blanditiis suscipit, sint voluptatem praesentium doloremque veniam
+                placeat aliquam dolores fuga consectetur possimus nulla, saepe modi? Obcaecati.</p>
         </div>
         <div class="flex mt-20">
-            <div class="w-1/2">
-                <img src="https://img.freepik.com/fotos-gratis/colecao-close-up-de-produtos-de-maquiagem-e-beleza_23-2148620012.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715472000&semt=sph" alt="Descrição da Imagem" class="rounded-lg h-80 w-80">
+            <div class="flex justify-center items-center w-1/2">
+                <div class="relative w-full h-full flex justify-center">
+                    <img src="https://odorata.com.br/wp-content/uploads/2022/07/batom-luxo-cremoso-vermelho-rosa-discreto.png"
+                        alt="Descrição da Imagem" class="rounded-lg h-[600px] w-[90%] ml-10">
+                </div>
             </div>
-            <div class="flex flex-col justify-center w-1/2 color-text-products"> 
-                <p class="text-2xl text-center mb-2 font-kasei-decol-800">Batons</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum, corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt. Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo minima aliquid in.</p>
+            <div class="flex flex-col justify-center w-1/2">
+                <p class="text-2xl text-center mb-2 font-kasei-decol-800 text-violet-400">Batons</p>
+                <p class="font-bold text-violet-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum,
+                    corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt.
+                    Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius
+                    animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo
+                    minima aliquid in.</p>
             </div>
         </div>
         <div class="flex mt-20">
-            <div class="flex flex-col justify-center w-1/2 color-text-products"> 
-                <p class="text-2xl text-center mb-2 font-kasei-decol-800">Rimels</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum, corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt. Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo minima aliquid in.</p>
+            <div class="flex flex-col justify-center w-1/2 text-violet-400">
+                <p class="text-2xl text-center mb-2 font-kasei-decol-800 text-violet-400">Rimels</p>
+                <p class="font-bold text-violet-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum,
+                    corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt.
+                    Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius
+                    animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo
+                    minima aliquid in.</p>
             </div>
             <div class="flex justify-end w-1/2 color-text-products">
-                <img src="https://img.freepik.com/fotos-gratis/colecao-close-up-de-produtos-de-maquiagem-e-beleza_23-2148620012.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715472000&semt=sph" alt="Descrição da Imagem" class="rounded-lg h-80 w-80">
+                <img src="https://odorata.com.br/wp-content/uploads/2022/07/batom-luxo-cremoso-vermelho-rosa-discreto.png"
+                    alt="Descrição da Imagem" class="rounded-lg h-[600px] w-[90%] ml-10">
             </div>
         </div>
         <div class="flex mt-20 mb-4">
-            <div class="w-1/2">
-                <img src="https://img.freepik.com/fotos-gratis/colecao-close-up-de-produtos-de-maquiagem-e-beleza_23-2148620012.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1715472000&semt=sph" alt="Descrição da Imagem" class="rounded-lg h-80 w-80">
+            <div class="flex justify-start w-1/2">
+                <img src="https://odorata.com.br/wp-content/uploads/2022/07/batom-luxo-cremoso-vermelho-rosa-discreto.png"
+                    alt="Descrição da Imagem" class="rounded-lg h-[600px] w-[90%] ml-10">
             </div>
-            <div class="flex flex-col justify-center w-1/2 color-text-products"> 
-                <p class="text-2xl text-center mb-2 font-kasei-decol-800">Bases</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum, corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt. Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo minima aliquid in.</p>
+            <div class="flex flex-col justify-center w-1/2 color-text-products">
+                <p class="text-2xl text-center mb-2 font-kasei-decol-800 text-violet-400">Bases</p>
+                <p class="font-bold text-violet-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Praesentium quibusdam ullam itaque atque provident! Atque voluptate nisi temporibus aperiam rerum,
+                    corporis nihil, distinctio nulla fuga est at doloremque magnam esse? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Molestias impedit vitae suscipit sit pariatur aliquid earum deserunt.
+                    Sunt saepe aliquid a facilis iure ipsum amet optio minima tempora. Fuga, quos? Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Doloremque inventore ratione nostrum! Blanditiis mollitia eius
+                    animi possimus odio aliquam corrupti reprehenderit temporibus a accusamus, reiciendis omnis, illo
+                    minima aliquid in.</p>
             </div>
         </div>
     </div>
 </div>
-
-
-
 
 <app-highlights></app-highlights>
 

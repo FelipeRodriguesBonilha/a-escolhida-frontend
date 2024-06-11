@@ -1,0 +1,53 @@
+<div class="text-white flex items-center justify-center w-full">
+    <div class="bg-violet-300 flex flex-col w-3/4 max-w-screen-2xl p-4">
+        <p class="text-2xl font-bold mb-4">Carrinho de compras</p>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Produto
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Categoria
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Quantidade
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(product of products; track $index){
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-violet-100 dark:hover:bg-gray-600">
+                        <th scope="row"
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                            <img [src]="apiUrl + product.image_url" class="w-[100px] h-[100px]" />
+                            <p class="ml-4">{{product.description}}</p>
+                        </th>
+                        <td class="px-6 py-4">
+                            <p>{{product.category.description}}</p>
+                        </td>
+                    </tr>
+                    }
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td colspan="3" class="px-6 py-4"></td>
+                        <td class="px-6 py-4 text-violet-400">Total R$13,00</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="p-4 flex justify-end items-center">
+            <div class="text-sm">
+                <a href="#" class="font-semibold text-white hover:text-pink-400 mr-4">Continuar Comprando</a>
+            </div>
+            <div>
+                <button type="submit"
+                    class="bg-violet-400 hover:bg-violet-300 hover:text-white font-bold py-2 px-4 rounded mr-2 hover:border-white flex w-full justify-center">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+</div>

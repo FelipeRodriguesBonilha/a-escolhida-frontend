@@ -1,3 +1,5 @@
+import { ReturnCartDto } from "../cart/returnCart.dto"
+
 export interface ReturnUserDto {
     uuid_user: string,
     name: string,
@@ -5,4 +7,6 @@ export interface ReturnUserDto {
     email: string,
     phone: string,
     uuid_city: string
+    cart_active?: ReturnCartDto
+    role?: number,
 }

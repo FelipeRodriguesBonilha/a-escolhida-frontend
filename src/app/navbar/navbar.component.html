@@ -5,18 +5,45 @@
         </div>
         <div class="flex-1">
             <ul class="flex justify-center space-x-4">
-                <li class="hover:underline cursor-pointer">Home</li>
-                <li class="hover:underline cursor-pointer">Produtos</li>
+                <li class="hover:underline cursor-pointer" routerLink="/">Home</li>
+                <li class="hover:underline cursor-pointer" routerLink="/products">Produtos</li>
                 <li class="hover:underline cursor-pointer">Skin Care</li>
                 <li class="hover:underline cursor-pointer">Sobre Nós</li>
             </ul>
         </div>
-        <div class="flex-1 flex justify-end">
-            <button class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white">Cadastrar-se</button>
-
-            <button class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white" routerLink="/login">Entrar</button>
+        <div class="flex-1 flex justify-end items-center">
+            @if(user){
+            <div class="flex mr-2 items-center" routerLink="/cart">
+                <p class="mr-1">{{ user.cart_active?.cart_products?.length || 0 }}</p>
+                <fa-icon [icon]="faCartShopping" class="mr-2 text-white"></fa-icon>
+            </div>
+            }
+            <button
+                class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white"
+                routerLink="/register">Cadastrar-se</button>
+            <button
+                class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white"
+                routerLink="/login">Entrar</button>
+            @if(user){
+                <button
+                class="bg-violet-400 hover:bg-violet-300 hover:text-white hover:border-solid hover:border-2 hover:border-white border-solid border-2 border-transparent font-bold py-2 px-4 rounded-full mr-2 hover:border-white"
+                (click)="logout()"
+                ><fa-icon [icon]="faArrowRightFromBracket" class="text-white"></fa-icon></button>
+            }
         </div>
     </div>
 </div>
 
-
+<div class="bg-white-300 text-white flex items-center justify-center w-full p-4">
+    <div class="flex items-center justify-center w-3/4 max-w-screen-2xl">
+        <div class="flex justify-around space-x-4 text-violet-400 w-full">
+            <p class="hover:underline cursor-pointer">Dia dos namorados</p>
+            <p class="hover:underline cursor-pointer">Rosto</p>
+            <p class="hover:underline cursor-pointer">Lábios</p>
+            <p class="hover:underline cursor-pointer">Olhos</p>
+            <p class="hover:underline cursor-pointer">Sombrancelhas</p>
+            <p class="hover:underline cursor-pointer">Skin Care</p>
+            <p class="hover:underline cursor-pointer">Bases</p>
+        </div>
+    </div>
+</div>

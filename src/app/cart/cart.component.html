@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+
+<div class="text-white flex items-center justify-center w-full">
+    <div class="bg-violet-300 flex flex-col w-3/4 max-w-screen-2xl p-4">
+        <p class="text-2xl font-bold mb-4">Carrinho de compras</p>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Produto
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Categoria
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Quantidade
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Valor
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(product of cart.cart_products; track $index){
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-violet-100 dark:hover:bg-gray-600">
+                        <th scope="row"
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex items-center">
+                            <img [src]="apiUrl + product.product.image_url" class="w-[100px] h-[100px]" />
+                            <p class="ml-4">{{product.product.description}}</p>
+                        </th>
+                        <td class="px-6 py-4">
+                            <p>{{product.product.category.description}}</p>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center justify-between w-[80px]">
+                                <fa-icon [icon]="faMinus" class="text-violet-400 mr-2" (click)="increment(product.quantity_product, product.product.uuid_product)"></fa-icon>
+                                <div>
+                                    <input id="quantity" value="{{product.quantity_product}}"
+                                        name="quantity" type="text" autocomplete="off" required
+                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 text-center">
+                                </div>
+                                <fa-icon [icon]="faPlus" class="text-violet-400 ml-2" (click)="decrement(product.quantity_product, product.product.uuid_product)"></fa-icon>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <p>{{product.product.price | currency: 'BRL' : 'symbol' : '1.2-2'}}</p>
+                        </td>
+                        <td><fa-icon [icon]="faTrash" class="text-violet-400 ml-2"></fa-icon></td>
+                    </tr>
+                    }
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td colspan="3" class="px-6 py-4"></td>
+                        <td class="px-6 py-4 text-violet-400">Total R$13,00</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="p-4 flex justify-end items-center">
+            <div class="text-sm">
+                <a href="#" class="font-semibold text-white hover:text-pink-400 mr-4">Continuar Comprando</a>
+            </div>
+            <div>
+                <button type="submit"
+                    class="bg-violet-400 hover:bg-violet-300 hover:text-white font-bold py-2 px-4 rounded mr-2 hover:border-white flex w-full justify-center">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+</div>

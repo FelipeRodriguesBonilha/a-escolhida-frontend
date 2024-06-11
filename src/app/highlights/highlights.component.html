@@ -1,41 +1,144 @@
-<div class="text-black flex items-center justify-center w-full p-4">
+<div class="bg-violet-100 text-black flex items-center justify-center w-full p-4">
   <div class="w-3/4 max-w-screen-2xl">
-    <div class="flex flex-col items-center w-full mt-4 mb-4">
-      <p class="text-2xl mb-1 font-kasei-decol-800">Produtos Destaques</p>
-      <p class="text-center color-text-products">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+    <div class="flex flex-col items-center w-full mt-4 mb-10">
+      <p class="text-2xl mb-1 font-bold font-kasei-decol-800 text-violet-400">Produtos Destaques</p>
+      <p class="font-bold text-violet-400 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
         repellendus ea fugiat maiores blanditiis suscipit, sint voluptatem praesentium doloremque veniam placeat aliquam
         dolores fuga consectetur possimus nulla, saepe modi? Obcaecati.</p>
     </div>
-    <div
-      class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-      @for(highlight of highlights; track $index){
 
-      <div class="group background-color-card rounded">
-        <div class="px-4 w-full">
-        <p class="text-right mb-1" (click)="likeProduct(highlight.uuid_product)"><svg xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-pink-400 hover:text-pink-300 inline-block fill-current stroke-current"
-            viewBox="0 0 20 20" stroke="currentColor">
-            <path fill-rule="evenodd"
-              d="M10 18l-1.45-1.32C3.4 12.14 0 9.13 0 5.5 0 2.42 2.42 0 5.5 0 7.22 0 8.85.74 10 2.06 11.15.74 12.78 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.63-3.4 6.64-8.55 11.18L10 18z"
-              clip-rule="evenodd" />
-          </svg> {{highlight.likes}}</p>
+
+    <div id="carousel-example" class="relative w-full h-full" data-carousel="static">
+      <!-- Carousel wrapper -->
+      <div class="relative h-full overflow-hidden rounded-lg">
+        <!-- Item 1 -->
+        <div id="carousel-item-1" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+          <p class="text-black text-2xl">TESTE</p>
         </div>
-        <a href="#">
-          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img [src]="apiUrl + highlight.image_url" alt="Imagem do produto {{highlight.description}}"
-              class="h-60 w-full object-cover object-center group-hover:opacity-75">
-          </div>
-          <div class="px-4 w-full">
-            <h3 class="mt-4 text-sm text-gray-700">{{highlight.description}}</h3>
-            <p class="mt-1 text-sm text-gray-500">{{highlight.category.description}}</p>
-            <p class="mt-1 text-lg font-medium text-gray-900 text-right">R${{highlight.price}}</p>
-          </div>
-        </a>
-        <div class="flex justify-center mt-2 mb-2">
-          <button class="bg-violet-400 hover:bg-violet-300 text-white font-bold py-2 px-4 rounded-full w-56">Adicionar ao carrinho</button>
+        <!-- Item 2 -->
+        <div id="carousel-item-2" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+          <img src="../../assets/imagens/makeup-2824659.jpg"
+            class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div id="carousel-item-3" class="hidden duration-200 ease-linear h-full carousel-item active"
+          data-carousel-item="active">
+          <img src="../../assets/imagens/makeup-2824659.jpg"
+            class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div id="carousel-item-4" class="hidden duration-200 ease-linear h-full carousel-item" data-carousel-item>
+          <img src="../../assets/imagens/makeup-2824659.jpg"
+            class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
         </div>
       </div>
-      }
+      <!-- Slider controls -->
+      <button type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </div>
+
+    <form [formGroup]="addToCartForm">
+      <div
+        class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        @for(highlight of highlights; track $index){
+        <div class="group bg-violet-200 rounded">
+          <a>
+            <div
+              class="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+              <img [src]="apiUrl + highlight.image_url" alt="Imagem do produto {{highlight.description}}"
+                class="h-60 w-full object-cover object-center group-hover:opacity-75">
+              <div class="absolute top-2 right-2">
+                <p class="text-right text-violet-400 mb-1 cursor-pointer flex items-center" (click)="likeProduct(highlight.uuid_product)">
+                  <fa-icon [icon]="faHeart" class="mr-1 text-violet-400 hover:text-violet-300 text-2xl"></fa-icon>
+                  {{highlight.likes}}
+                </p>
+              </div>
+            </div>
+            <div class="px-4 w-full">
+              <h3 class="mt-4 text-sm text-gray-700">{{highlight.description}}</h3>
+              <p class="mt-1 text-sm text-gray-500">{{highlight.category.description}}</p>
+              <p class="mt-1 text-2xl font-medium text-gray-900 text-right">R${{highlight.price}}</p>
+            </div>
+          </a>
+          <div class="flex justify-center mt-2 mb-2">
+            <button class="bg-violet-400 hover:bg-violet-300 text-white font-bold py-2 px-4 rounded-full w-56"
+              data-modal-target="default-modal" data-modal-toggle="default-modal" (click)="toggleModal()">Adicionar ao
+              carrinho</button>
+            @if(showModal){
+            <div
+              class="overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+              [ngClass]="showModal ? 'opacity-100' : 'opacity-0'">
+              <div class="relative w-auto my-6 mx-auto max-w-6xl">
+                <div class="border-0 rounded-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                  <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                    <h3 class="text-3xl font-semibold">
+                      Quantidade de produtos
+                    </h3>
+                    <button
+                      class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                      (click)="toggleModal()">
+                      <span
+                        class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                        ×
+                      </span>
+                    </button>
+                  </div>
+                  <div class="relative p-6 flex-auto">
+                    <div class="py-4 text-blueGray-500 text-lg leading-relaxed w-full flex justify-center">
+                      <div class="flex items-center justify-between w-[80px]">
+                        <fa-icon [icon]="faMinus" class="text-violet-400 mr-2"></fa-icon>
+                        <div>
+                          <input id="quantity" formControlName="quantity_product" name="quantity" type="text"
+                            autocomplete="off" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 text-center">
+                        </div>
+                        <fa-icon [icon]="faPlus" class="text-violet-400 ml-2"></fa-icon>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button type="submit"
+                      class="bg-transparent hover:text-violet-400 font-bold py-2 px-4 rounded mr-2 hover:border-white flex justify-center"
+                      (click)="toggleModal()">Fechar</button>
+                    <button type="submit" (click)="toggleModal()"
+                      class="bg-violet-400 hover:bg-violet-300 text-white hover:text-white font-bold py-2 px-4 rounded mr-2 hover:border-white flex justify-center"
+                      (click)="addToCart(highlight.uuid_product)">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+            @if(showModal){
+            <div class="opacity-50 fixed inset-0 z-40" [ngClass]="showModal ? 'opacity-100' : 'opacity-0'"></div>
+            }
+          </div>
+        </div>
+        }
+      </div>
+    </form>
   </div>
 </div>
